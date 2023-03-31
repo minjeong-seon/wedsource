@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>폼태그1</title>
+  </head>
+  <body>
+    <!-- 폼 태그
+        form : 사용자가 입력할 수 있는 형태로 만들어진 모든 것
+
+        <form method="보내는 방법" action="데이터 전송할 페이지"> -method 안 쓰면 default로 지정
+            method : form 안의 데이터를 주소(url)에 감싸서 보낼 것인지(post) 보여주면서 보낼 것인지(get) 결정
+                post : form 안의 데이터가 노출되면 안 되는 경우(중요한 데이터 -ex) 개인정보(로그인 시))
+                get(default) : form 안의 데이터가 노출되어도 상관 없는 경우(검색어 같은 거)
+
+            action : 폼안의 데이터를 전송할 주소(페이지)
+              =>백엔드 프로그램이 들어올 부분
+
+          1. 폼 요소
+            1) text 형태 데이터 입력 : <input type="text" name="이름지정(중복불가)">
+            2) 
+    -->
+    <form method="get" action="link2.html">
+      <p>
+        <!-- input에 name=""을 안 붙이면 사용자 입력정보가 erl에 노출되지 않음-->
+        <!-- <label for=""></label> : 라벨명은 라벨명일 뿐...
+              <label >라벨명 <감쌀 내용> </label> : 라벨명만 클릭해도 input에 커서가 입력됨-->
+        <label for="">이름</label>
+        <input type="text" name="name" />
+      </p>
+      <p>
+        <label
+          >나이
+          <input type="text" name="age" />
+        </label>
+      </p>
+      <p>
+        <label
+          >전화번호
+          <input type="text" name="tel" />
+        </label>
+      </p>
+      <p>
+        <!-- submit : 현재 폼을 action이 지정한 곳으로 전송해주는 역할-->
+        <input type="submit" value="전송" />
+      </p>
+    </form>
+    <!-- http://192.168.45.64:5500/htmlsource/link2.html?name=김태형&age=28세
+          -->
+  </body>
+</html>

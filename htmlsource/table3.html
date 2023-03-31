@@ -12,11 +12,33 @@
     </style>
   </head>
   <body>
-    <!-- caption : 테이블 제목(기본: 중앙정렬) -->
+    <!-- caption : 테이블 제목(기본: 중앙정렬) 
+         figcaption : 테이블 제목(좌측 정렬)-->
     <table border="1">
-      <caption>
-        <b>테이블</b>
-      </caption>
+      <b>
+        <caption>
+          테이블
+        </caption>
+      </b>
+      <tr>
+        <th>이름</th>
+        <td>&nbsp;</td>
+        <th>연락처</th>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th>주소</th>
+        <td colspan="3">ㅇ</td>
+      </tr>
+      <tr>
+        <th>자기소개</th>
+        <td colspan="3"></td>
+      </tr>
+    </table>
+    <table border="1">
+      <figcaption>
+        <strong>테이블</strong>
+      </figcaption>
       <tr>
         <th>이름</th>
         <td>&nbsp;</td>
@@ -33,13 +55,26 @@
       </tr>
     </table>
     <!--
-        wrap : 컨+시+p > wrap 검색 > p+enter
+        wrap : 감싸고 싶은 영역 드래그 > 컨+시+p > wrap 검색 > p + enter
     -->
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-      doloribus est dolore quasi quidem blanditiis laudantium rem eligendi odit
-      ipsum quo cumque dignissimos consectetur, modi autem hic debitis molestiae
-      distinctio!
-    </p>
+    <figcaption>
+      <strong>테이블</strong>
+    </figcaption>
+    <table border="1">
+      <tr>
+        <th>이름</th>
+        <td>&nbsp;</td>
+        <th>연락처</th>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th>주소</th>
+        <td colspan="3">ㅇ</td>
+      </tr>
+      <tr>
+        <th>자기소개</th>
+        <td colspan="3"></td>
+      </tr>
+    </table>
   </body>
 </html>
