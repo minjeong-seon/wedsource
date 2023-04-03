@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>priority</title>
+    <style>
+      .ecosystem {
+        color: red;
+      }
+      .tiger {
+        color: navy;
+      }
+      .area p {
+        color: gold;
+      }
+      p {
+        color: rgb(15, 141, 11);
+      }
+      #text1 {
+        color: lightcoral;
+      }
+      #text2 {
+        color: rgb(248, 87, 0) !important;
+        background-color: rgb(11, 92, 11);
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+        우선순위 : 스타일 우선순위 
+        (*선택자가 동일할 때는 cascading(위에서 아래의 흐림)으로, 가장 밑의 코드가 실행됨*)
+        1. !important : 1,000점(임의의 점수)
+        2. 인라인 선언 : 500점
+        3. 아이디 선택자 : 100점
+        4. 클래스 선택자(+가상 클래스) : 10점
+        5. 태그 선택자(+가상 요소) : 1점
+        6. 전체 선택자
+        7. 상속
+
+        .list li.item {} <--21점
+        .list li.hover {} <--21점
+        .box::after {} <--11점
+        #submit span {} <--101점
+        :not(.box) {} <--10점 (not()은 점수 없음)
+
+        스타일 상속 : 자식 요소ㅔ서 별도로 스타일을 지정하지 않는 경우 부모의 스타일 속성이 전달됨
+            ->글자를 다루는 속성들이 주로 전달됨
+    -->
+    <div class="ecosystem">
+      <div class="animal">
+        동물
+        <div class="tiger">호랑이</div>
+        <div class="lion">사자</div>
+        <div class="elephant">코끼리</div>
+      </div>
+      <div class="plant">식물</div>
+    </div>
+
+    <div class="area">
+      <p id="text1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel ea maxime
+        eaque optio sint sit. Eveniet atque excepturi quasi, unde laboriosam
+        dolorum facilis, saepe, deserunt incidunt mollitia suscipit eaque
+        dolore?
+      </p>
+      <p id="text2" style="color: hotpink">
+        <!-- inline style이 우선순위2위 -->
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel ea maxime
+        eaque optio sint sit. Eveniet atque excepturi quasi, unde laboriosam
+        dolorum facilis, saepe, deserunt incidunt mollitia suscipit eaque
+        dolore?
+      </p>
+    </div>
+  </body>
+</html>

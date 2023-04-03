@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css test1</title>
+    <style>
+      /* 글자 크기
+        1) 절대크기 : 브라우저에서 저장한 글자 크기 (xx-small / x_small / small / medium / large / x-large / xx-large)
+        2) 상대크기 : 부모 요소의 글자 크기를 기준으로 더 크게/더 작게(larger/smaller) 표시
+        3) *크기(직접 지정) : 브라우저와 상관없이 글자 크기 직접 지정
+        4) 백분율 : 부모 요소의 글자 크기를 기준으로 %를 계산해 표시
+
+        *크기 직접 지정
+        1) em : 1em = 16px(body에 따로 지정한 크기가 없을 시 기본값)
+        2) px : 
+        3) pt : 
+
+        */
+      h1 {
+        font-size: 3em;
+      }
+      p {
+        font-size: 1em;
+        font-weight: 600; /*글자 굵기 : bold(=700), normal(=400), border / 100-900사이 숫자*/
+      }
+      p.txt {
+        font-style: italic; /*종류 : normal, italic(주로 사용), oblique*/
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 글꼴 관련 스타일 
+    1) 기본 글꼴 지정 : 사용자 컴퓨터에 설치되어 있는 글꼴
+    2) 웹폰트 사용
+-->
+    <h1>제목</h1>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt
+      inventore ipsum nisi. Accusamus dolore omnis dolores porro, consectetur
+      dolor aliquam tempore necessitatibus numquam unde reprehenderit velit
+      maiores similique excepturi distinctio?
+    </p>
+    <p class="txt">나폴리, 이탈리아</p>
+    <h2 class="header"></h2>
+    <h2 id="header"></h2>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>선택자12 -가상 요소</title>
+    <style>
+      h3::before,
+      h3::after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        background-color: rgb(238, 0, 255);
+        display: inline-block;
+        margin-right: 10px;
+        margin-left: 10px;
+      }
+
+      ul li {
+        margin: 15px;
+      }
+
+      li.hot::after {
+        content: "NEW";
+        font-size: x-small;
+        padding: 2px 4px;
+        margin: 0 10px;
+        border-radius: 2px;
+        background-color: rgb(255, 12, 12);
+        color: rgb(255, 255, 255);
+      }
+
+      h1 {
+        color: darkturquoise;
+      }
+
+      :not(h1) {
+        color: royalblue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        스타일 지정을 위해 앞 쪽에 쓰는 선택자는 다양하게 존재함
+        
+        1)태그 선택자 : head 이하 모든 선택자에 적용된다.
+        2)전체 선택자 : 모든 선택자에 적용됨(선택자 위치에 *)
+        3)클래스 선택자 : 클래스명이 일치하는 모든 선택자에 대해 속성 부여(더 많이 사용)
+        4)아이디 선택자 : 아이디명은 한 페이지 내에서 중복될 수 없음(=아이디마다 일일이 속성 부여해야 함)
+        5)자손(하위) 선택자 : 부모(공백)자손 (=자식+손자) (ex- div h2)
+        6)자식 선택자 : 부모>자식 (ex- div>h2)
+        7)인접 형제 선택자 : 부모 자식1+자식2 = 자식1만 적용, 부모 자식1~자식2 = 자식 둘 다 적용
+        8)그룹화 : ,를 찍어서 공통 속성을 한번에 부여(style 영역의 코드는 짧아야 하므로 추천되는 방법*)
+        9)속성 선택자 : [속성]
+          [속성=값] : 특정 값을 갖는 속성에 스타일 지정
+          [속성~=값] : 여러 값 중 특정 값을 포함하는 속성에 스타일 지정
+          [속성|=값] : ~와 동작은 비슷하나, 값 -' '를 추가로 선택
+          [속성^=값] : 특정 값으로 시작하는 속성에 스타일 지정(split str....머 그런 느낌..)
+          [속성$=값] : 특정 값으로 끝나는 속성에 스타일 지정
+
+        10)가상 클래스(pseudo class: 슈도 클래스) 선택자
+          :link -> 방문하지 않은 링크에 스타일 적용
+          :visited -> 방문한 링크에 스타일 적용
+          :hover -> 웹 요소에 커서를 올려 놓을 때 스타일 적용
+          :active -> 웹 요소를 활성화 했을 때 스타일 적용
+          :focus -> 웹 요소에 초점이 맞춰졌을 때 스타일 적용
+
+          UI 요소 상태에 따른 가상 클래스
+          :enabled -> 활성화
+          :disabled -> 비활성화
+          :checekd -> 체크 표시
+
+        11)구조 가상 클래스 : 웹 문서 구조를 기준으로 특정 위치에 있는 요소를 찾아 스타일 지정
+          :root ->문서 전체에 적용
+          :nth-child(n)
+            ex1) div p:nth-child(3) -div 태그 자식 중 세 번째 p태그
+            ex2) div p:nth-child(odd/2n+1) -홀수 번째 자식
+            ex3) div p:nth-child(even/2n) -짝수 번째 자식
+          :nth-last-cheild(n)
+          :first-child
+          :last-child
+          :nth-of-type(n), nth-of-type(n)
+          :first-of-type, last-of-type
+          :only-chile, only-of-type
+
+        12)가상 요소 : 
+          ::before, ::after =내용 앞/뒤에 content 추가
+          :not(요소) =괄호 안 요소를 제외하고 적용
+        -->
+
+    <h1 id="title">css기본 문법</h1>
+    <h2>가상 요소 선택자</h2>
+    <h3>가상 요소 선택자 활용</h3>
+    <ul>
+      <li class="hot">제품A</li>
+      <li>제품B</li>
+      <li>제품C</li>
+      <li class="hot">제품D</li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css-Test2</title>
+    <style>
+      /*font : 글꼴 속성을 한꺼번에 묶어서 표현
+            : font-style, font-variant, font-weight, font-size | line-light, font-family*/
+      p {
+        font: 20px "휴먼편지체";
+      }
+      /*font-family : 글꼴 -글꼴명에 공백이 있으면 ''로 묶기*/
+      div {
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-size: 15px;
+        line-height: 1.5;
+      }
+      .shadow1 {
+        color: orange;
+        text-shadow: 1px 1px; /*가로 세로 번짐정도 색상 순서*/
+      }
+      .shadow2 {
+        color: rgb(229, 255, 0);
+        text-shadow: 2px 2px 3px rgb(62, 144, 4);
+      }
+      .shadow3 {
+        color: rgb(0, 0, 0);
+        text-shadow: 0px 0px 3px rgb(255, 255, 11);
+      }
+      .letter {
+        font-size: 20px;
+        letter-spacing: -5px; /*자간*/
+      }
+      .word {
+        font-size: 20px;
+        word-spacing: 10px; /*단어 사이 간격*/
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      여러 요소가 함께 사용된 웹 문서 안에서 텍스트가 눈에 띄게 하려면 내용에
+      맞는 글꼴과 글자 크기, 글자 색을 선택하는 것이 중요합니다.
+    </p>
+    <p>이럴 때 사용할 수 있는 것이 글꼴 속성입니다.</p>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas provident
+      incidunt, earum quasi ea doloremque reprehenderit accusamus ullam
+      dignissimos molestiae quae ut doloribus ad odio delectus totam
+      repudiandae, corporis laudantium asperiores sit temporibus minima
+      voluptates dolores sed? Rerum reprehenderit ea necessitatibus ducimus,
+      magni exercitationem? Consequatur veniam quam vitae fuga sint eaque, quae
+      perferendis tempora officiis? Minima magnam obcaecati quisquam. Aperiam,
+      autem sed obcaecati porro quas esse vero, eos sit placeat, aut quos nulla
+      voluptatem asperiores doloribus quae repellat. Exercitationem iusto
+      blanditiis, commodi rerum quis illum? Ratione quasi, ut, eius optio
+      cumque, modi vitae iusto vero fuga dignissimos rerum quisquam assumenda!
+    </div>
+    <h1 class="shadow1">html5</h1>
+    <h1 class="shadow2">html5</h1>
+    <h1 class="shadow3">html5</h1>
+    <p class="letter">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi non vel
+      nobis pariatur voluptates, distinctio, quam voluptas quae commodi
+      praesentium similique magnam quas, neque minus ut cumque eius tempora
+      totam.
+    </p>
+    <p class="word">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum culpa vel
+      labore voluptatem corrupti non facilis, fugiat similique aut quisquam,
+      pariatur obcaecati ipsa quidem officiis ratione veniam repellat
+      voluptatibus? Quo.
+    </p>
+  </body>
+</html>
