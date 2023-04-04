@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>박스모델1</title>
+    <style>
+      .child1 {
+        width: 100px;
+        height: 100px;
+        background-color: coral;
+        border: 4px solid red;
+        padding: 20px;
+        box-sizing: border-box; /*요소 크기 산정 시 border 까지 포함해서 산정*/
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+    박스모델
+    1) 태그 요소 상태 - 인라인;inline : 옆으로 나열 / 블럭;block : 한 행씩 나열
+    2) 요소 크기 : border + padding + content
+      박스모델 : margin + border + padding + content
+
+    마진 중복(병합)
+    형제 요소들의 margin-top 과 margin-bottom이 만나는 경우 발생(left, right는 마주쳐도 병합 안 됨)
+  -->
+
+    <div class="child1">contents</div>
+  </body>
+</html>

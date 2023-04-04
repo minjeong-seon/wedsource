@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>박스모델1</title>
+    <style>
+      .parent {
+        width: 150px;
+        height: 300px;
+        border: 4px solid tomato;
+      }
+      .child {
+        /*width: auto; 생략 => 부모자식 관계에서는 자식요소의 width 는 부모의 100%*/
+        max-width: 300px; /*부모 요소의 가로 너비가 변화할 때 자식 요소 너비는 일정 크기를 유지하기 위해 사용*/
+        min-width: 200px;
+        height: 200px;
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+    박스모델
+    1) 태그 요소 상태 - 인라인;inline : 옆으로 나열 / 블럭;block : 한 행씩 나열
+    2) 요소 크기 : border + padding + content
+      박스모델 : margin + border + padding + content
+  -->
+
+    <div class="parent">
+      <div class="child"></div>
+    </div>
+  </body>
+</html>

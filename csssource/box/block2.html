@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>block2</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background: rgb(163, 95, 219);
+        margin: 10px; /*바깥쪽 여백*/
+
+        display: inline-block;
+      }
+      span {
+        width: auto;
+        height: 100px;
+        background: red;
+      }
+      p {
+        text-align: center;
+      }
+      p a {
+        background-color: darkblue;
+        color: aliceblue;
+        text-decoration: none;
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        line-height: 40px;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+      div 
+      블럭 요소 : width 100%, height : 0이 기본값
+          (내용이 없어도 width, height에 임의의 값 입력 시 화면에 보여짐)
+      span
+      인라인 요소 : width 0, height: 0 스타트 =>내용에 따라 변화
+          (=내용이 없으면 아무것도 안 나옴)
+
+      display : inline-block(inline+block 기능: 옆으로 나열+내용 없어도 화면 반영), inline, block, none
+    -->
+    <div></div>
+    <div></div>
+    <div></div>
+    <span></span>
+    <p>
+      <a href="#" id="">1</a>
+      <a href="#" id="">2</a>
+      <a href="#" id="">3</a>
+      <a href="#" id="">4</a>
+      <a href="#" id="">5</a>
+    </p>
+    <div class="hidden">Hidden Area</div>
+  </body>
+</html>

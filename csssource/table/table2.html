@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>table2.css</title>
+    <style>
+      caption {
+        font: 36px "고딕체";
+        font-weight: bold;
+      }
+      table {
+        border: 1px solid black;
+        border-collapse: collapse;
+        caption-side: bottom; /*caption위치 변경 가능*/
+      }
+      .heading {
+        background-color: #eee;
+      }
+      table th,
+      table td {
+        border: 1px solid black;
+        padding: 10px;
+        width: 150px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <caption>
+        2022년 국민 독서실태
+      </caption>
+      <tr class="heading">
+        <th>구분</th>
+        <th>성인</th>
+        <th>학생</th>
+      </tr>
+      <tr>
+        <th class="heading">독서율</th>
+        <td>65.3%</td>
+        <td>29.8권</td>
+      </tr>
+      <tr>
+        <th class="heading">연평균 독서량</th>
+        <td>9.1권</td>
+        <td>29.8권</td>
+      </tr>
+      <tr>
+        <th class="heading">공공도서관 이용률</th>
+        <td>28.2%</td>
+        <td>64.9%</td>
+      </tr>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List1-순서 없는 목록</title>
+    <style>
+      .a {
+        list-style-type: disc;
+        list-style-position: inside; /*들여쓰기*/
+        /* list-style-image: url(); 이미지 삽입 가능 */
+        /* list-style: disc inside; <- type이나 position을 한번에 처리 */
+      }
+      .b {
+        list-style-type: circle;
+      }
+      .c {
+        list-style-type: square;
+      }
+      .d {
+        list-style-type: none;
+        list-style-position: outside; /*기본(변화 없음)*/
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 목록 스타일 
+        1) 순서 없는 목록 : disc(기본), circle(빈 원), square, none
+    -->
+    <ul class="a">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JAVASCRIPT</li>
+    </ul>
+    <ul class="b">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JAVASCRIPT</li>
+    </ul>
+    <ul class="c">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JAVASCRIPT</li>
+    </ul>
+    <ul class="d">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JAVASCRIPT</li>
+    </ul>
+  </body>
+</html>
