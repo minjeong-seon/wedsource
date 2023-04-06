@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>float5</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: gold;
+        margin-right: 10px;
+        float: left;
+      }
+      .box1 {
+        width: 150px;
+        height: 150px;
+        background-color: tomato;
+        border: 3px solid, olivedrab;
+      }
+      .clearfix::after {
+        content: "";
+        clear: both;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clearfix">
+      <div class="box">박스1</div>
+      <div class="box">박스2</div>
+      <div class="box">박스3</div>
+    </div>
+    <div class="box1">박스4</div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
+      voluptates repellendus aliquam rerum, in enim suscipit nisi sed quibusdam
+      nihil, sequi, atque fuga vero natus porro voluptatem aspernatur. Vitae,
+      magni?
+    </p>
+  </body>
+</html>

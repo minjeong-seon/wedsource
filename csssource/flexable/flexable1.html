@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>felxable1</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .container div {
+        /*margin: 0 20px;*/
+        /* background: silver;*/
+        width: 33.3%;
+        height: 300px;
+      }
+      .container div:first-child {
+        background: yellow;
+      }
+      .container div:nth-child(2) {
+        background: yellowgreen;
+      }
+      .container div:last-child {
+        background: green;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+        flex : 배치되어야 할 요소들을 플레스 컨테이너로 묶어야 함
+        display: flex;
+        flex-direction : row(기본) / row-reverse / column / column-reverse; ->배치 방향
+
+
+        수직 => 수평 배치
+            1) display: inline-block;
+            2) float: left/right;
+            3) flex
+    -->
+    <div class="container">
+      <div>flex-item1</div>
+      <div>flex-item2</div>
+      <div>flex-item3</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>float10-menu구성</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      .menu {
+        background: #333;
+      }
+      ul li {
+        float: left;
+        list-style: none;
+      }
+      li a {
+        display: inline-block;
+        padding: 14px 16px;
+        text-decoration: none;
+        color: aliceblue;
+      }
+
+      a:hover {
+        background: blueviolet;
+      }
+
+      .clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="menu clearfix">
+      <li>
+        <a href="#" class="active">Home</a>
+        <a href="#">News</a>
+        <a href="#">Contact</a>
+        <a href="#">About</a>
+      </li>
+    </ul>
+  </body>
+</html>

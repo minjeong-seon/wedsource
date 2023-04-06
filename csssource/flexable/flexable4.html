@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>felxable3</title>
+    <style>
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-around;
+        height: 400px;
+        border: 2px solid red;
+      }
+
+      .container .item {
+        width: 200px;
+        height: 100px;
+        border: 4px double blue;
+      }
+      .container .item:first-child {
+        background: yellow;
+      }
+      .container .item:nth-child(2) {
+        background: yellowgreen;
+      }
+      .container .item:nth-child(3) {
+        background: green;
+      }
+      .container .item:nth-child(4) {
+        background: darkgreen;
+      }
+      .container .item:last-child {
+        background: black;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+        flex : 배치되어야 할 요소들을 플레스 컨테이너로 묶어야 함
+
+        display: flex;
+        flex-direction : row(기본) / row-reverse / column / column-reverse; ->배치 방향
+
+        flex-wrap : no-wrap(기본: 한 줄에 표시), wrap, wrap-reverse;
+
+        order : 배치 순서 결정
+
+        justify-content (주 축의 정렬): 
+          flex-start(기본); -> 주 축의 시작점을 기준으로 배치(왼쪽 배치)
+          flex-end; -> 주 축의 끝점을 기준으로 배치(오른쪽 배치)
+          center; -> 중앙 배치
+          space-between; -> 양쪽 (정렬)배치(첫번째 플렉스와 마지막 플렉스를 먼저 양끝에 배치 후 중앙은 동일한 간격으로 배치)
+          space-around; -> 플렉스 양쪽 공백이 동일하게 배치
+          space-evenly; -> 플렉스와 공백의 공간 너비가 균일하게 배치
+
+        align-content : 교차축 정렬(여러 줄 배치되는 상황이어야 함)
+          flex-start; -> 교차축의 시작점에 배치
+          flex-end; -> 교차축의 끝점에 배치
+          space-between; -> 양쪽 (정렬)배치(첫번째 플렉스와 마지막 플렉스를 먼저 양끝에 배치 후 중앙은 동일한 간격으로 배치)
+          space-around; -> 플렉스 양쪽 공백이 동일하게 배치(주축 시작점에서)
+          space-evenly; -> 플렉스와 공백의 공간 너비가 균일하게 배치
+
+
+        수직 => 수평 배치
+            1) display: inline-block;
+            2) float: left/right;
+            3) flex
+    -->
+    <div class="container">
+      <div class="item">A</div>
+      <div class="item">B</div>
+      <div class="item">C</div>
+      <div class="item">D</div>
+      <div class="item">E</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>inline2</title>
+    <link rel="stylesheet" href="inline2.css" />
+  </head>
+  <body>
+    <!-- 
+        block 요소를 inline 형태로 나열할 때 문제점
+
+            1)display: inline-block; 
+                =>right, bottom에 여백이 생김 
+                    ->하단: vertical-align: top;
+                    ->오른쪽: 부모 요소 font-size: 0;(그러나 글자가 나오지 않음)
+
+                ->>text-align 사용 가능
+
+            2)float: left/right;
+                =>자식 요소가 float 일 때 
+                >부모 요소로부터 뜨게 되어 부모의 height 를 0으로 인식함
+                    ->overflow: hidden; =부모 요소의 height만 해결되므로 다른 요소는 문제로 남는다.
+                    ->clear:both;
+                        1) float 다음 요소에서 해제하기
+                        2)가상요소(clearfix::after) 사용해서 해제하기(더 많이 사용)
+
+                ->>inline-block 공백 문제 없음
+                ->>left, right 방식이 자유로움
+
+
+     -->
+    <div class="grid clearfix">
+      <div class="grid-item a"></div>
+      <div class="grid-item b"></div>
+      <div class="grid-item c"></div>
+    </div>
+  </body>
+</html>

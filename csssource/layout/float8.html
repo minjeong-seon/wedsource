@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flaot8-예제풀이</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      .portfolio {
+        width: 960px;
+        margin: 100px auto;
+        background: mediumaquamarine;
+      }
+      .portfolio li {
+        list-style: none;
+        width: 225px;
+        height: 225px;
+        background: salmon;
+        margin-right: 20px;
+        float: left;
+      }
+      .portfolio li:last-child {
+        list-style: none;
+        width: 225px;
+        height: 225px;
+        background: salmon;
+        margin-right: 0px; /*안 하면 li에 공통적용된 속성 그대로 물려받음*/
+        float: left;
+      }
+      .clearfix::after {
+        content: "";
+        clear: both;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="portfolio clearfix">
+      <li>pic1</li>
+      <li>pic2</li>
+      <li>pic3</li>
+      <li>pic4</li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>media1</title>
+    <style>
+      body {
+        background: url("images/bg0.jpg") no-repeat fixed;
+        background-size: cover;
+      }
+
+      @media screen and (max-width: 1024px) {
+        /*769~1024px*/
+        body {
+          background: url("images/bg1.jpg") no-repeat fixed;
+          background-size: cover;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        /*321~768px*/
+        body {
+          background: url("images/bg2.jpg") no-repeat fixed;
+          background-size: cover;
+        }
+      }
+
+      @media screen and (max-width: 320px) {
+        /*0~320px*/
+        body {
+          background: url("images/bg3.jpg") no-repeat fixed;
+          background-size: cover;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        반응형 웹 : 웹사이트 디자인 시 pc(decktop)가 기준이었음
+         => 모바일(tablet, smartphone) 접속 증가 => 사용자 접속 기기에 따라 웹 형태 변화
+
+            뷰포트 : 실제 내용이 표시되는 영역
+        
+        => 미디어 쿼리 : @media 미디어 유형 and (조건1) and (조건2)...{}
+            미디어 유형 : screen(컴퓨터 스크린, 스마트폰 스크린)
+            조건은 대부분 width, height
+
+     -->
+  </body>
+</html>

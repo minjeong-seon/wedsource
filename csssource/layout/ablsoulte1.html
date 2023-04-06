@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>absolute1</title>
+    <style>
+      .container {
+        width: 500px;
+        height: 300px;
+        margin: 0 auto;
+        background: oldlace;
+        position: relative;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+      }
+      .a {
+        background: red;
+        left: -50px;
+        top: 100px;
+      }
+      .b {
+        background: hotpink;
+        left: 200px;
+        top: 100px;
+      }
+      .c {
+        background: pink;
+        right: -50px;
+        top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+      position: absolute;
+
+      위치 상 부모 요소(position 값이 부여된 다른 요소)를 기준으로 배치
+        -부모 요소가 없을 시, 화면을 기준으로 함
+     -->
+    <div class="container">
+      <div class="box a">Box A</div>
+      <div class="box b">Box B</div>
+      <div class="box c">Box C</div>
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora alias
+      doloribus blanditiis eligendi quisquam quos? Sed eos, officiis provident
+      beatae deserunt, ducimus saepe nam veritatis consequuntur impedit quo,
+      facilis exercitationem!
+    </p>
+  </body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>media3</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box; /*요소의 크기를 산정할 때 border까지 포함하기 -컨텐츠가 바뀔 때 흐트러지지 않도록*/
+      }
+
+      body {
+        background: rgb(9, 100, 160);
+      }
+
+      .container {
+        width: 320px;
+        margin: 50px auto;
+      }
+
+      .card {
+        width: 300px;
+        height: 500px;
+        margin: 20px 10px;
+        border: 1px solid black;
+        background: white;
+        position: relative;
+      }
+
+      .word {
+        padding: 10px;
+        text-align: right;
+        position: absolute;
+        left: 100px;
+        top: 300px;
+      }
+
+      @media screen and (max-width: 768px) {
+        .container {
+          width: 320px;
+          margin: 50px auto;
+        }
+
+        .card {
+          width: 300px;
+          height: 500px;
+          margin: 20px 10px;
+          border: 1px solid black;
+          background: white;
+          position: relative;
+        }
+
+        .word {
+          padding: 10px;
+          text-align: right;
+          position: absolute;
+          left: 100px;
+          top: 300px;
+        }
+      }
+
+      @media screen and (max-width: 1719px) {
+        .container {
+          width: 570px;
+          margin: 50px auto;
+        }
+
+        .card {
+          width: 550px;
+          height: 251px;
+          margin: 10px;
+          border: 1px solid blue;
+          background: white;
+          position: relative;
+        }
+
+        .word {
+          padding: 10px;
+          text-align: right;
+          position: absolute;
+          left: 300px;
+          top: 70px;
+        }
+      }
+
+      @media screen and (min-width: 1720px) {
+        .container {
+          width: 1710px;
+          margin: 50px auto;
+        }
+
+        .card {
+          width: 550px;
+          height: 251px;
+          margin: 0px 10px;
+          border: 1px solid blue;
+          background: white;
+          float: left;
+          position: relative;
+        }
+
+        .word {
+          padding: 10px;
+          text-align: right;
+          position: absolute;
+          left: 300px;
+          top: 70px;
+          clear: both;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <img src="images/1.jpg" alt="" />
+        <div class="word">
+          <h2>일 분 전만큼 먼 시간은 없다.</h2>
+          <h3>- Jim Bishop</h3>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/2.jpg" alt="" />
+        <div class="word">
+          <h2>웃음은 마음의 조깅이다.</h2>
+          <h3>- Norman Cousins</h3>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/3.jpg" alt="" />
+        <div class="word">
+          <h2>낡은 옷은 그냥 입고 새 책을 사라.</h2>
+          <h3>- Austin Phelips</h3>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

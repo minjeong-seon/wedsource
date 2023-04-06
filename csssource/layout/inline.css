@@ -1,0 +1,28 @@
+body {
+  background: black;
+}
+
+.grid {
+  width: 500px;
+  margin: 0 auto;
+  background: white;
+  font-size: 0;
+}
+
+.grid-item {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  vertical-align: top;
+}
+.grid-item.a {
+  background: orange;
+}
+
+.grid-item.b {
+  background: orangered;
+}
+
+.grid-item.c {
+  background: red;
+}

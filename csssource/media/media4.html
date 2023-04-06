@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>media4</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        background: #ecf0f1;
+      }
+
+      .wrapper {
+        width: 100%;
+        margin: 2rem auto;
+        max-width: 60rem;
+      }
+
+      .flexbg {
+        display: flex;
+        flex-wrap: nowrap;
+      }
+
+      .wrapper main {
+        order: 2;
+        width: 60%;
+        padding: 1.618rem;
+      }
+
+      .flexbg .sidebar {
+        color: white;
+        width: 20%;
+        padding: 1.618rem;
+      }
+
+      .wrapper .left {
+        order: 1;
+        background: #3498db;
+      }
+
+      .wrapper .right {
+        order: 3;
+        background: #34495e;
+      }
+
+      /*tablet screen 구현: width ~768px 까지는 사이드 바가 하단에 나란히 위치하도록 구성*/
+      @media screen and (max-width: 768px) {
+        .flexbg {
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .wrapper main {
+          order: 2;
+          width: 100%;
+          padding: 1.618rem;
+        }
+
+        .flexbg .sidebar {
+          color: white;
+          width: 50%;
+          padding: 1.618rem;
+        }
+        .wrapper .left {
+          order: 1;
+          background: #3498db;
+        }
+
+        .wrapper .left {
+          order: 2;
+          background: #3498db;
+        }
+
+        .wrapper .right {
+          order: 3;
+          background: #34495e;
+        }
+      }
+
+      /*mobile screen 구현: width ~480px 까지는 사이드 바가 하단에 일렬로 위치하도록 구성*/
+      @media screen and (max-width: 480px) {
+        .flexbg {
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .wrapper main {
+          order: 2;
+          width: 100%;
+          padding: 1.618rem;
+        }
+
+        .flexbg .sidebar {
+          color: white;
+          width: 100%;
+          padding: 1.618rem;
+        }
+        .wrapper .left {
+          order: 1;
+          background: #3498db;
+        }
+
+        .wrapper .left {
+          order: 2;
+          background: #3498db;
+        }
+
+        .wrapper .right {
+          order: 3;
+          background: #34495e;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper flexbg">
+      <main>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt ut
+          officia molestias nulla iure nobis repellendus facilis consectetur
+          quia perferendis, harum nostrum obcaecati soluta similique tenetur
+          optio eum. Provident quisquam voluptates deleniti. Sed, in? Saepe
+          commodi repudiandae, accusamus ex id, officiis magni corporis eius
+          sequi accusantium, et repellat. Neque dolorem quibusdam cum amet,
+          minus, porro voluptatibus nesciunt adipisci error voluptate autem
+          quisquam quae. Explicabo eaque ullam doloribus accusantium incidunt
+          aliquam ea expedita cupiditate corporis qui ex ratione amet mollitia
+          vel facere, dolor velit, sint dolores beatae natus eligendi sit
+          aliquid! Perspiciatis adipisci odit illo ipsum tenetur maiores
+          molestias, nemo sequi?
+        </p>
+        <p>
+          2Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+          alias corporis laboriosam deleniti laudantium culpa repudiandae
+          reiciendis vel minima id. Dicta atque minus aspernatur aliquam
+          recusandae ratione! Minus, voluptatibus culpa.
+        </p>
+      </main>
+      <aside class="sidebar left">
+        3Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa corrupti
+        corporis delectus, quisquam ratione facilis ea velit? Eum eius animi
+        dolores dolorum recusandae reprehenderit blanditiis beatae rem labore,
+        illo nihil?
+      </aside>
+      <aside class="sidebar right">
+        4Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa corrupti
+        corporis delectus, quisquam ratione facilis ea velit? Eum eius animi
+        dolores dolorum recusandae reprehenderit blanditiis beatae rem labore,
+        illo nihil?
+      </aside>
+    </div>
+  </body>
+</html>
