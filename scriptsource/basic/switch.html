@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js-switch</title>
+  </head>
+  <body>
+    <script>
+      //수학, 영어, 국어 점수 입력받아서 평균 구하기
+      //평균에 따라 성적 출력
+      //90이상=A , 80이상=B, 70이상=C, 60이상=D, 나머지는 F
+
+      //alert() : 경고창
+      //prompt() : 사용자 입력 받는 창
+      //confirm() : 확인=true, 취소=false 선택 창
+
+      let kor = Number(prompt("국어성적", ""));
+      let eng = Number(prompt("영어성적", ""));
+      let math = Number(prompt("수학성적", ""));
+      let avg = (kor + eng + math) / 3;
+      document.write("평균점수: ", avg);
+
+      switch (parseInt(avg / 10)) {
+        case 10:
+        case 9:
+          document.write("  학점 : A");
+          break;
+        case 8:
+          document.write("  학점 : B");
+          break;
+        case 7:
+          document.write("  학점 : C");
+          break;
+        case 6:
+          document.write("  학점 : D");
+          break;
+        default:
+          document.write("   학사경고 : F");
+          break;
+      }
+    </script>
+  </body>
+</html>

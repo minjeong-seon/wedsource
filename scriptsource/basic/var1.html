@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>var1</title>
   </head>
+  <script></script>
+  <!-- 외부 파일로 작성된 스크립트 포함하기 -->
+  <!-- <script src="myscript.js"></script> -->
   <body>
     <!--
         javascript 생태계
@@ -21,16 +24,36 @@
             1) Angular
             2) Vue.js(핫함)
         
-        -자바스크립트 라이브러리
+        - 자바스크립트 라이브러리
             1) React(핫함)
             2) jQuery
 
+        - 자바스크립트 선언 위치
+          1) head/body(권장) 태그 사이
+          2) 외부 파일로 작성 후 포함시키기 - <script src="파일명.js"></script>
+          3) 인라인 방식으로 작성 - 아래 button 태그 참고*
+
+        - 변수 선언 : 타입 지정 없음
+          1) var
+          2) let
+        - 상수 선언 : const
     -->
+    <button type="button" onclick="location.href='https:/www.naver.com'">
+      클릭
+    </button>
     <script>
       //스크립트는 닫는 body 앞/닫는 head앞에 <script>태그를 띄워서 작성(주석: //)
       //에러는 브라우저 개발자도구창(F12) 내 console 창 확인!!!
 
-      alert("javascript는 동작을 구현합니다.");
+      // alert("javascript는 동작을 구현합니다.");
+
+      // var 변수명 = 값;
+      var value1 = 3; //변수 선언
+      console.log(value1);
+
+      //let value1 = 5; //SyntaxError: Identifier 'value1' has already been declared (at var1.html:54:11)
+      let value2 = 5;
+      console.log(value2);
     </script>
   </body>
 </html>

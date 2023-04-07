@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자바스크립트 변수2</title>
+  </head>
+  <body>
+    <script>
+      // ♣var : 변수 재선언 가능, 할당, 함수레벨 스코프(함수 안에서 선언된 변수는 외부에서 사용 불가)
+      // 함수 => 단독으로 실행 | 메소드 => 객체 생성, 생성 후 호출 필요
+      function foobar() {
+        var foo = 5;
+        console.log(foo);
+      }
+      foobar(); //함수 호출
+      //Uncaught ReferenceError: foobar is not defined
+      //console.log(foo); //함수(function) 안에서 선언된 변수 사용
+
+      if (true) {
+        var a = 6;
+        console.log("블럭 내부", a);
+      }
+      console.log("블럭 외부", a);
+
+      // ♣let : 변수 재선언 불가, 할당, 블록레벨 스코프(블록 안에서만 변수가 유효함-지역변수)
+      function foobar1() {
+        let foo1 = 5;
+        console.log(foo1);
+      }
+      //Uncaught ReferenceError: foo1 is not defined(블록 외부에서 사용 불가)
+      //console.log(foo1);
+
+      if (true) {
+        let b = 6;
+        console.log("블럭 내부", b);
+      }
+      //Uncaught ReferenceError: foo1 is not defined
+      //console.log("블럭 외부", b);
+
+      let b = 7;
+      console.log("새로 선언함", b);
+    </script>
+  </body>
+</html>

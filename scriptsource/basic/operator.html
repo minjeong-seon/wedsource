@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js-operator</title>
+  </head>
+  <body>
+    <script>
+      // 연산자
+      // 산술, 비교, 연결
+      let a = 4,
+        b = 5;
+
+      console.log("a+b=", a + b); //9
+      console.log("a-b=", a - b); //-1
+      console.log("a*b=", a * b); //20
+      console.log("a/b=", a / b); //0.8
+      console.log("a%b=", a % b); //4
+
+      console.log("a==b ", a == b); //false
+      console.log("a!=b ", a != b); //true
+
+      // ==, != : 값만 비교
+      // ===, !== : 값+타입 비교
+      let c = "4";
+      console.log("a==c ", a == c); //true
+      console.log("a===c ", a === c); //false
+      console.log("a!=c ", a != c); //false
+      console.log("a!==c ", a !== c); //true
+
+      let d = "3";
+      // 문자열+숫자 : +는 연결연산자
+      console.log("c+d=", c + d); //43
+      console.log("a+d=", a + d); //43
+      // +외에는 산술연산자로 적용
+      console.log("a+d=", a - d); //1
+      console.log("a*d=", a * d); //12
+      console.log("a/d=", a / d); //1.3333...
+    </script>
+  </body>
+</html>

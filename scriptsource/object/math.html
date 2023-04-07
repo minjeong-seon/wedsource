@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js-math</title>
+  </head>
+  <body>
+    <script>
+      document.write("1) " + Math.E + "<br>");
+      document.write("2) " + Math.PI + "<br>");
+      document.write("3) " + Math.floor(3.14159) + "<br>");
+      document.write("4) " + Math.ceil(2.123) + "<br>");
+      document.write("5) " + Math.abs(-3) + "<br>");
+      document.write("6) " + Math.max(5, 8, 9, 12) + "<br>");
+      document.write("7) " + Math.min(5, 8, 9, 12) + "<br>");
+      document.write("8) " + Math.sqrt(36) + "<br>");
+      document.write("9) " + Math.random() + "<br>");
+      document.write("10) " + Math.random() * 10 + "<br>");
+      document.write("11) " + Math.floor(Math.random() * 11) + "<br>");
+      document.write("12) " + Math.floor(Math.random() * 31) + "<br>");
+      document.write("13) " + Math.floor(Math.random() * 31) + 120 + "<br>");
+
+      //(로또번호 생성)임의의 번호 6개 추출한 후 배열에 담기
+      let lotto = [];
+      //   while (true) {
+      //     lotto.push(parseInt(Math.random() * 45 + 1));
+      //     if (lotto.length > 5) break;
+      //   }
+
+      //중복제거ver. Lotto 번호 자동 생성기
+      for (let index = 0; index < 6; index++) {
+        let num = parseInt(Math.random() * 45 + 1);
+        if (lotto.indexOf(num) == -1) {
+          //indexOf 의 결과가 -1 == 배열 안에 일치하는 값이 없음
+          lotto.push(num); //랜덤 생성한 번호 배열에 추가
+        }
+      }
+
+      document.write("금주의 행운 번호 : " + lotto);
+    </script>
+  </body>
+</html>

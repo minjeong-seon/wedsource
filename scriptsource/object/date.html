@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js-date</title>
+  </head>
+  <body>
+    <script>
+      //자바스크립트 내장 객체
+      // 1) Date
+      var now = new Date();
+      document.write(now + "<br>");
+      document.write("year : " + now.getFullYear() + "<br>");
+      document.write("month : " + now.getMonth() + +"<br>"); //1월=0
+      document.write("day : " + now.getDay() + "<br>");
+      document.write("hours : " + now.getHours() + "<br>");
+      document.write("minutes : " + now.getMinutes() + "<br>");
+      document.write("seconds : " + now.getSeconds() + "<br>");
+      document.write("ms : " + now.getMilliseconds() + "<br>");
+      document.write("날짜를 문자열 형태로 : " + now.toDateString() + "<br>");
+
+      //특정 날짜 지정
+      //let date1 = new Date(2023, 11, 15)
+    </script>
+  </body>
+</html>

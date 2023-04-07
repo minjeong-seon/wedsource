@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js-array2</title>
+  </head>
+  <body>
+    <script>
+      let fruit = ["사과", "망고", "수박", "멜론", "블루베리", "샤인머스캣"];
+
+      //push() : 요소 추가
+      fruit.push("딸기");
+
+      //unshift() : 맨 앞에 요소 추가
+      fruit.unshift("용과");
+
+      //특정 위치에 요소 변경
+      fruit[3] = "리치";
+
+      for (let index = 0; index < fruit.length; index++) {
+        document.write(fruit[index] + "<br>");
+      }
+
+      //pop() : 마지막 요소 삭제
+      document.write("<p>마지막 요소 삭제</p>");
+      fruit.pop();
+
+      //shift() : 첫번째 요소 삭제
+      document.write("첫번째 요소 삭제" + "<br>");
+      fruit.shift();
+
+      //splice(위치, 갯수) : 특정 위치 요소 n개 삭제
+      document.write("<p>fruit[2]~[3] 삭제</p>");
+      fruit.splice(2, 2);
+
+      fruit.forEach((element) => {
+        document.write(element + "<br>");
+      });
+    </script>
+  </body>
+</html>

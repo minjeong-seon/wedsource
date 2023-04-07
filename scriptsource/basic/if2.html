@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js-if2</title>
+  </head>
+  <body>
+    <script>
+      //prompt(string, string(입력받는 값))=String 타입 리턴
+      //Number(prompt();)=number 타입 리턴
+      //parseInt(prompt();)=number 타입 리턴
+      //   let number = parseInt(prompt("숫자를 입력해 주세요.", "숫자"));
+      //   //숫자가 아닌 문자를 입력하면 NaN이 출력됨
+      //   console.log(number);
+      //   console.log(typeof number);
+      //
+      //   // 양수 or 음수 결과 출력
+      //   if (number > 0) {
+      //     console.log("양수");
+      //   } else if (isNaN(number)) {
+      //     //NaN을 비교할 때는 isNaN(비교대상) 함수 이용
+      //     console.log("문자를 입력함");
+      //   } else {
+      //     console.log("음수");
+      //   }
+
+      //입력을 받아서 짝/홀 출력
+      let no = Number(prompt("정수 입력", "0이상의 숫자"));
+      console.log(no);
+      if (no % 2 == 0) {
+        //console.log("짝수");
+        document.write("even no"); //브라우저에서 바로 확인
+      } else {
+        //console.log("홀수");
+        document.write("odd no");
+      }
+    </script>
+  </body>
+</html>

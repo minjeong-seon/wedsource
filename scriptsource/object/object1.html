@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js-Object</title>
+  </head>
+  <body>
+    <script>
+      //document.write("<br>");
+
+      //객체 생성
+      // 1)생성자 함수
+      // 2)객체 리터럴 이용
+
+      //객체 리터럴에 의한 객체 생성 방식
+      let person = {
+        name: ["john", "Smith"],
+        age: 32,
+        gender: "male",
+        interests: ["music", "skiing"],
+        greeting: function () {
+          alert("Hello! I'm " + this.name[0] + ".");
+        },
+      };
+
+      document.write("type: " + typeof person + "<br>");
+
+      console.log(person);
+      document.write(person.name + "<br>");
+      document.write(person.name[1] + "<br>");
+      document.write(person.interests[0] + "<br>");
+      //document.write(person.greeting() + "<br>");
+
+      document.write("<br>");
+
+      let person1 = {
+        name: {
+          first: "john",
+          last: "Smith",
+        },
+        age: 32,
+        gender: "male",
+        interests: ["music", "skiing"],
+        greeting: function () {
+          alert("Hello! I'm " + this.name[0] + ".");
+        },
+      };
+
+      console.log(person1);
+      console.log(person1.name);
+      document.write(person1.name.first + "<br>");
+      document.write(person1.name.last + "<br>");
+      //.안 찍고 대괄호로 출력할 수도 있음
+      document.write(person1["name"] + "<br>");
+      document.write(person1["name"]["first"] + "<br>");
+      document.write(person1.interests[0] + "<br>");
+
+      document.write("<br>");
+      document.write("<b>객체 복사 후</b>" + "<br>");
+
+      //얕은 값 복사
+      //원본과 복사본이 같이 수정됨
+      let person2 = person;
+      person2.name[0] = "david";
+      document.write("person2.name ▶ " + person2.name + "<br>");
+      document.write("person.name ▶ " + person.name + "<br>");
+
+      document.write("<br>");
+
+      //깊은 값 복사 : ...(spread)연산자 사용
+      //값만 복사됨
+
+      //let person3={...person} => 따로 객체가 생성된 name, interests는 얕은 복사만 됨
+      let person3 = { ...person, name: { ...person.name } };
+      person3.name[0] = "Miley";
+      person3.age = 12;
+      document.write("person3.name ▶ " + person3.name[0] + "<br>");
+      document.write("person3.age ▶ " + person3.age + "<br>");
+
+      document.write("person.name ▶ " + person.name[0] + "<br>");
+      document.write("person.age ▶ " + person.age + "<br>");
+
+      document.write("<br>");
+      document.write("<b>person1 수정->console확인</b>" + "<br>");
+
+      //프로퍼티(변수) 수정
+      person1.name.first = "Crhis";
+      //새로운 프로퍼티 추가
+      person1["eyes"] = "hazel";
+      //새로운 메소드 추가
+      person1.farewell = function () {
+        alert("Bye");
+      };
+      console.log(person1);
+    </script>
+  </body>
+</html>

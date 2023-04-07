@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>const</title>
+  </head>
+  <body>
+    <script>
+      //const : 블록레벨 스코프, 재선언 불가
+      const val1 = 10;
+      console.log(val1);
+
+      if (true) {
+        const val1 = 20;
+        console.log(val1);
+      }
+      //Uncaught TypeError: Assignment to constant variable.
+      //재할당 불가(상수는 처음 할당된 값을 유지해야 함)
+      val1 = 15;
+    </script>
+  </body>
+</html>
