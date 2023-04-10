@@ -8,7 +8,8 @@
   </head>
   <body>
     <script>
-      // var : 변수 재선언 가능, 할당, 함수레벨 스코프
+      // var : 변수 재선언 가능, 할당, 함수레벨 스코프, 호이스팅 가능
+      console.log(val1); //undefined (호이스팅 가능)
       var val1 = 3; //선언+할당
       console.log(val1);
 
@@ -18,9 +19,9 @@
       val1 = 10; //재할당
       console.log(val1);
 
-      // let : 변수 재선언 불가, 할당, 블록레벨 스코프]
+      // let : 변수 재선언 불가, 할당, 블록레벨 스코프, 호이스팅 불가
+      console.log(val2); //Cannot access 'val2' before initialization(호이스팅불가)
       let val2 = 6; //선언+할당
-      console.log(val2);
       //▼SyntaxError: Identifier 'val2' has already been declared (at var2.html:25:11)
       //let val2 = 7; //재선언 불가 (var에 썼던 변수도 let에 중복 불가)
 

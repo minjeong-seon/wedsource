@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js-function7</title>
+  </head>
+  <body>
+    <script>
+      //예제1) 1~10까지 더하는 함수를 함수 표현식(익명)으로 작성하여 결과 body에 출력
+      const answer = function () {
+        let sum = 0;
+        for (let i = 1; i <= 10; i++) {
+          sum += i;
+        }
+        return sum;
+      };
+      console.log(answer());
+
+      //예제2) 3의 배수 찾기(3의 배수면 박수! 아니면 통과! 메시지 출력)
+      function answer2(num1) {
+        if (num1 % 3 == 0) {
+          console.log("박수!");
+        } else {
+          console.log("통과");
+        }
+      }
+      answer2(5);
+
+      //예제3) 3의 배수인 경우 박수!, 9의 배수인 경우 박수!*2, 아니면 통과 출력
+      function answer3(num2) {
+        if (num2 % 3 == 0 && num2 % 9 != 0) {
+          console.log("박수!");
+        } else if (num2 % 3 == 0 && num2 % 9 == 0) {
+          console.log("박수!x2");
+        } else {
+          console.log("통과");
+        }
+      }
+      answer3(18);
+
+      //예제4) 입력받은 수의 끝자리가 3/6/9로 끝나는 숫자일 때 박수, 아니면 통과 출력
+      function answer4(num3) {
+        let digit = num3 % 10;
+        if (digit == "3" || "6" || "9") {
+          console.log("박수!");
+        } else {
+          console.log("실패");
+        }
+      }
+      answer4(19);
+
+      //예제5) 공인중개사 시험점수를 입력하면 결과를 알려주는 함수
+      //      -과목별 100점 만점, 두 과목 합산 120점 이상=합격
+      //      -과목 당 40점 미만시 과락 불합격
+      function answer5(num4, num5) {
+        let score = num4 + num5;
+        if (num4 >= 40 && num5 >= 40 && score >= 120) {
+          console.log("합격");
+        } else {
+          console.log("불합격");
+        }
+      }
+      answer5(50, 80);
+
+      //소숫점 계산
+      function calc() {
+        //toFixed() : 소숫점 말끔히 나오지만 문자로 리턴됨 => parseFloat로 바꿔야 함
+        return parseFloat((1.1 + 1.3).toFixed(1));
+      }
+      console.log(calc());
+    </script>
+  </body>
+</html>

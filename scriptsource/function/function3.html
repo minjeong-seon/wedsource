@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js-function3</title>
+  </head>
+  <body>
+    <script>
+      // 호이스팅 가능 (호출 먼저=>선언 나중에)
+      console.log(mutifly(3, 4));
+      // 함수 선언 방식
+      function mutifly(a, b) {
+        return a * b;
+      }
+
+      console.log(a);
+      var a = "안녕";
+      console.log(a);
+
+      // 호이스팅 불가 (먼저 호출 불가)
+      console.log(myfunction); //Cannot access 'myfunction' before initialization
+      // 함수 표현식
+      const myfunction = function (a, b) {
+        return a * b;
+      };
+    </script>
+  </body>
+</html>

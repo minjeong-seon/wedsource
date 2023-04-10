@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <input type="text" name="username" id="username" />
+      <button class="confirm" type="button">클릭</button>
+      <button class="confirm" type="submit">확인</button>
+      <button class="confirm" type="reset">취소</button>
+    </form>
+    <script>
+      // NodeList => forEach 가능, HTMLCollection => forEach 불가
+      // 3. 클래스명으로 요소 찾기(여러개 배열처럼)
+      let btns = document.getElementsByClassName("confirm");
+      console.log(btns);
+
+      for (let i = 0; i < btns.length; i++) {
+        console.log(btns[i]);
+      }
+
+      // 4. css 선택자로 찾기
+      // 1) querySelector() : 가장 처음에 만나는 요소 찾아옴
+      // 2) querySelectorAll() : 전체 요소 찾아옴(NodeList)
+      const btns1 = document.querySelectorAll(".confirm");
+      console.log(btns1);
+
+      array.forEach((element) => {
+        console.log(element);
+      });
+    </script>
+  </body>
+</html>

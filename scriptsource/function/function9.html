@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js-function9</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .alert-danger {
+        height: 60px;
+        color: #58151c;
+        border: 1px #f1aeb5;
+        border-radius: 10px;
+        background: #f8d7da;
+        line-height: 60px;
+        padding-left: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="alert alert-danger">
+      <span>10</span>초 이내 상품 구매시 당일 배송!!!
+    </div>
+    <!--
+      화면에서 안 보이게 설정 >> display: none or visibility:hidden
+      =>화면에서 안 보이지만 영역을 차지할 것인지(visibility:hidden) 아닌지(display: none)
+    -->
+    <script>
+      // 10초가 지나면 브라우저 화면에 div 태그 창이 보이지 않도록 기능
+      // setTimeout(() => {
+      //   document.querySelector(".alert").style.display = "none";
+      // }, 10000);
+
+      //10초 카운트가 화면에 보이도록 설정
+      let count = 10;
+      setInterval(() => {
+        count -= 1;
+        if (count >= 0) {
+          document.querySelector(".alert span").innerHTML = count;
+        } else {
+          document.querySelector(".alert").style.display = "none";
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>

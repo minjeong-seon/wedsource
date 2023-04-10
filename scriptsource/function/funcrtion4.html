@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js-function4</title>
+  </head>
+  <body>
+    <script>
+      //   function info() {
+      //     //소문자로 영문 이름 입력받기 => 대문자로 변경
+      //     //전화번호 입력받기(010-1234-5678) => 010-####-5678로 출력
+      //     let name = prompt("영문 이름 입력(소문자로) : ");
+      //     let tel = prompt("전화번호 입력 (010-1111-1111) : ");
+
+      //     document.write(name.toUpperCase() + "<br>");
+      //     document.write(tel.replace(tel.substring(4, 8), "####") + "<br>");
+      //   }
+
+      //   info();
+
+      //e-mail을 입력받아 이메일에 @기호가 포함되어 있는지 확인하는 함수 작성
+      //@기호가 없을 시, => 이메일 형식을 확인해 주세요.
+      //@기호가 있을 시, => body 안에 입력된 주소 출력
+      function emailCheck() {
+        let email = prompt("이메일 입력");
+        if (email.indexOf("@") == -1) {
+          alert("이메일 형식을 확인해 주세요.");
+          emailCheck();
+        } else {
+          document.write(email);
+        }
+      }
+      emailCheck();
+    </script>
+  </body>
+</html>

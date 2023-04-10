@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js-function2</title>
+  </head>
+  <body>
+    <script>
+      // 함수 선언 방식
+      function mutifly(a, b) {
+        return a * b;
+      }
+
+      // 함수 호출
+      console.log(mutifly());
+      console.log(mutifly(4, 3));
+
+      // 함수 표현식 -익명함수
+      const myfunction = function (a, b) {
+        return a * b;
+      };
+
+      console.log(myfunction());
+      console.log(myfunction(5, 6));
+
+      // 함수 표현식 -기명함수
+      const myfunction2 = function name(a, b) {
+        return a * b;
+      };
+
+      //name 이름은 외부에서 호출할 수 없음
+      // console.log(name(7, 8)); //Uncaught TypeError: name is not a function
+      console.log(myfunction2(12, 3));
+
+      //function 안에 function은 선언 가능
+      //중첩된 function은 function 내부에서만 호출 가능
+      function a() {
+        function b() {
+          console.log("b");
+        }
+        if (true) {
+          function c() {
+            console.log("C");
+          }
+        }
+        b();
+        c();
+      }
+
+      //함수 내부에 있는 함수 외부 호출 가능? No!
+      a();
+      //   b(); //b is not defined
+      //   c();
+    </script>
+  </body>
+</html>
