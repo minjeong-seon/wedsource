@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js-update -스타일 변경2</title>
+    <style></style>
+  </head>
+  <body>
+    <h1 id="header" class="one two">Header 1</h1>
+    <script>
+      //h1 태그 -blue, border, padding, font-size 40px 스타일 넣기
+
+      // 1) style.스타일명=""
+      const h1 = document.getElementById("header");
+      // h1.style.color = "blue";
+      // h1.style.border = "1px solid grey";
+      // h1.style.padding = "10px";
+      // h1.style.fontSize = "40px";
+
+      // 2) style.cssText = ""
+      h1.style.cssText =
+        "color: blue; border: 1px solid grey; padding: 10px;fontSize: 40px";
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js-create3</title>
+  </head>
+  <body>
+    <script>
+      //<img src="" alt=""> 태그 만들기
+      window.onload = function () {
+        const img = document.createElement("img");
+        //태그에 속성 추가
+        // 1) setAttribute
+        // img.setAttribute("src", "../image/dog1.jpg");
+        // img.setAttribute("alt", "포메라니안 사진");
+        // 2) 바로 넣기
+        img.src = "../image/dog1.jpg";
+        img.alt = "포메라니안 사진";
+        document.body.appendChild(img);
+      };
+    </script>
+  </body>
+</html>

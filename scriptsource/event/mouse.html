@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mouse</title>
+    <style>
+      p {
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Mouse over me!!</p>
+    <script>
+      //마우스 이벤트
+      const p = document.querySelector("p");
+      p.addEventListener("mouseover", () => {
+        //마우스가 오버되면 폰트 컬러 변경: magenta
+        p.style.color = "magenta";
+      });
+      p.addEventListener("mouseout", (e) => {
+        //마우스가 아웃되면 폰트 컬러 원복: blck
+        e.target.style.color = "black"; //변수에 안 담을 거였으면 이렇게 하면 됨
+        //p.style.cssText = "color: black";
+      });
+    </script>
+  </body>
+</html>

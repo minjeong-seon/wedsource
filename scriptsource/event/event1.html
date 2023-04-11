@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js-event</title>
+  </head>
+  <body>
+    <!--
+        이벤트 핸들러가 전역속성으로 제공됨
+    -->
+    <h1 ondrag="" onclick="show('Hello','Hong')">Hello</h1>
+    <script>
+      //이벤트: 사이트에서 방문자가 행동하는 모든 행위
+      //이벤트 핸들러 : 이벤트가 발생했을 때 실행되는 코드
+
+      //함수로 이벤트 핸들러 작성(비권장)
+      function show(greeting, name) {
+        alert(`${greeting}!!${name}`);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>click1</title>
+    <style>
+      p {
+        font-size: 35px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="outside">
+      <tr>
+        <td id="t1">one</td>
+      </tr>
+      <tr>
+        <td id="t2">two</td>
+      </tr>
+    </table>
+    <p id="demo">Click me</p>
+    <a href="#">여기로</a>
+    <script>
+      //사용자가 table 클릭 시 two <-> three로 번갈아가면서 바뀜
+      const table = document.getElementById("outside");
+      table.addEventListener("click", () => {
+        const t2 = document.getElementById("t2");
+        const isThree = t2.innerText === "three";
+        t2.innerText = isThree ? "two" : "three";
+      });
+
+      //p요소 클릭 시 텍스트 문자 Click me->Good Job!!으로 변경
+      // const demo = document.getElementById("demo");
+      // demo.addEventListener("click", () => {
+      //   demo.innerText = "Good Job!";
+      // });
+
+      //클릭 한번만
+      const demo = document
+        .getElementById("demo")
+        .addEventListener("click", (e) => {
+          //현재 이벤트가 일어난 대상 찾기
+          //console.log(e.target);
+          e.target.innerText = "Good Job!";
+        });
+    </script>
+  </body>
+</html>

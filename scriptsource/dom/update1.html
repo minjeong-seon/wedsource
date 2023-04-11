@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js-update -속성변경</title>
+  </head>
+  <body>
+    <h1 id="header" class="one two">Header 1</h1>
+    <script>
+      //h1에 class 변경
+      const h1 = document.getElementById("header");
+      //h1의 전체 클래스명
+      console.log(h1.classList);
+      //특정 클래스명 변경
+      h1.classList.replace("one", "header");
+      //클래스 추가
+      h1.classList.add("three");
+      //추가할 클래스명이 존재하지 않을 때만 클래스명 추가하기(존재하면 해당 클래스명 없어짐)
+      h1.classList.toggle("four");
+      //h1.classList.toggle("two");
+
+      //클래스 이름 제거
+      h1.classList.remove("two");
+    </script>
+  </body>
+</html>

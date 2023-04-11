@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>remove2-속성 삭제</title>
+    <style>
+      .header {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="header" class="header">Header 1</h1>
+    <h2 id="header2" class="header">Header 2</h2>
+    <div id="top">
+      <div id="nested">내용</div>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum,
+        consectetur? Perferendis ea dignissimos impedit perspiciatis, nisi
+        recusandae laborum molestias aperiam architecto autem debitis
+        distinctio, repudiandae ad magnam sunt exercitationem facere?
+      </p>
+    </div>
+    <script>
+      const h1 = document.querySelector("h1");
+      h1.removeAttribute("class"); //제거할 속성명
+
+      const h2 = document.querySelector("h2");
+      h2.removeAttribute("id");
+      h2.innerHTML = ""; //h2 안의 내용 삭제
+    </script>
+  </body>
+</html>
