@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        height: 150px;
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut esse
+      explicabo nam maiores libero tempore sapiente natus, eos quidem veniam
+      voluptate quas aliquam suscipit temporibus placeat praesentium ducimus
+      cupiditate atque saepe sequi similique autem dolores cumque. Numquam,
+      quibusdam odio! Ratione sit aspernatur quaerat nulla velit quibusdam ipsam
+      ut distinctio perspiciatis aperiam nisi vero dolor quam, tempore sequi
+      natus quis quo iste? Quo iusto culpa, voluptate deserunt natus praesentium
+      esse optio nisi aspernatur, eveniet minima, ullam id itaque! Pariatur
+      nulla nemo nam ullam cupiditate eius quasi omnis distinctio quod incidunt
+      asperiores sunt mollitia nostrum ex, laborum eaque inventore repellat
+      adipisci aut nisi aliquam soluta dolore. Nihil, incidunt culpa?
+      Perspiciatis, maxime explicabo natus labore et earum fugit, nihil,
+      possimus nisi eius cupiditate omnis eum harum atque. Excepturi, eos amet!
+      Ipsum, fugit. Aperiam soluta doloremque veniam minima voluptatibus hic
+      deleniti eius nesciunt labore aliquam mollitia vel aut sed, provident
+      recusandae ex sequi tenetur omnis! Rem reiciendis eaque ipsum quod
+      voluptates. Laboriosam quis dolores voluptates omnis nulla? Perspiciatis
+      hic eaque maxime quae facilis atque temporibus veritatis? Sit, ea, sint
+      illo quidem veniam in ipsam obcaecati iste modi ad corrupti! Dicta
+      blanditiis accusantium atque voluptates velit eaque, debitis perspiciatis
+      ex, iure culpa fuga voluptatibus. Fugiat rerum, nostrum officia eum autem
+      nihil, officiis earum, accusamus culpa expedita sint enim? Rerum
+      laboriosam ut a non possimus fugit suscipit, illum aperiam fugiat unde
+      magnam sapiente provident alias commodi, voluptas magni saepe. Aperiam,
+      recusandae sequi temporibus rerum repellat molestias odit suscipit
+      explicabo eligendi quia dolores voluptates, esse, cupiditate molestiae
+      quod similique consequuntur harum natus voluptatum dolorum fugiat?
+      Voluptatibus vero accusantium ullam ipsa, earum nemo ratione sint saepe
+      fugiat amet nesciunt dolore incidunt quam nostrum reprehenderit, atque
+      cum, in temporibus facilis dolores dolorem quasi eligendi. Architecto aut
+      sed, praesentium, aliquid adipisci minima ad asperiores nobis suscipit
+      illo quidem numquam impedit? Corporis cupiditate, voluptatum debitis ad ut
+      quia nam voluptatem. Sit in quibusdam ab cum sunt omnis unde quisquam
+      ratione quia maiores similique cupiditate, dolores vitae doloribus natus
+      quo enim accusantium cumque aperiam iste non. Similique nam consectetur
+      aliquid quo incidunt neque praesentium illum? Optio rerum illum laboriosam
+      earum, adipisci cumque modi iusto dolorem voluptate sint fugit. Tempore
+      molestiae blanditiis earum non delectus, sunt itaque eligendi corporis
+      repellat recusandae deserunt distinctio, suscipit quis animi vitae veniam
+      in placeat accusantium assumenda dicta reprehenderit incidunt. Illo atque,
+      est ipsa ratione facilis incidunt eos dicta nobis, libero architecto
+      labore sunt eius consectetur quam perspiciatis distinctio minus
+      praesentium nostrum fuga aspernatur ab ullam nemo. Quia harum nulla
+      molestias illo, aperiam asperiores saepe, sint dolorum consequuntur ex
+      quidem minima laboriosam facilis libero laborum aliquam expedita, iusto
+      eligendi cum atque tempora corporis! Culpa quam earum maxime beatae,
+      impedit praesentium officiis voluptas, esse natus labore ipsum, sequi
+      libero dolor ratione quo odio provident debitis ullam unde consequatur
+      eaque vitae repellendus quasi incidunt? Dolor illo commodi adipisci minus
+      est. Adipisci neque aliquam, aut, nihil tempora fugit temporibus est
+      laborum obcaecati pariatur modi! Mollitia modi dignissimos, atque error at
+      facilis molestias consectetur quaerat exercitationem dicta quia libero
+      deleniti dolore laboriosam!
+    </div>
+    <script>
+      const div = document.querySelector("div");
+
+      console.log("들어가기 전");
+      console.log(div.scrollHeight); //스크롤 높이+div Height(보이는 높이)
+      console.log(div.clientHeight); //div Height
+
+      // scrollHeight = ScrollTop + clientHeight**
+
+      div.addEventListener("scroll", () => {
+        // console.log(div.scrollTop); //현재 스크롤 위치
+        //div 안의 스크롤이 바닥에 닿으면 경고창 (회원약관을 다 읽었습니다.) 띄우기
+        if (div.scrollTop >= div.scrollHeight - div.clientHeight) {
+          alert("회원 약관을 다 읽었습니다.");
+        }
+        // if (div.scrollTop + div.clientHeight == div.scrollHeight) {
+        //   alert("회원 약관을 다 읽었습니다.");
+        // }
+      });
+    </script>
+  </body>
+</html>

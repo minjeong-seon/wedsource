@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transform</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .container {
+        width: 300px;
+        height: 150px;
+        border: 2px solid black;
+        overflow: hidden; /*테두리를 넘어가는 영역은 숨기기*/
+      }
+      .wrap {
+        width: 1500px;
+        transform: translate(0);
+        transition: all 0.5s;
+      }
+      .box {
+        width: 300px;
+        height: 150px;
+        float: left;
+      }
+      .box1 {
+        background: yellow;
+      }
+      .box2 {
+        background: tomato;
+      }
+      .box3 {
+        background: red;
+      }
+      .box4 {
+        background: peachpuff;
+      }
+      .box5 {
+        background: salmon;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrap">
+        <div class="box box1">box1</div>
+        <div class="box box2">box2</div>
+        <div class="box box3">box3</div>
+        <div class="box box4">box4</div>
+        <div class="box box5">box5</div>
+      </div>
+    </div>
+    <div class="bt-area">
+      <button type="button" class="prev">이전</button>
+      <button type="button" class="next">다음</button>
+    </div>
+
+    <script>
+      //캐러셀 움직일 때
+      // -size*인덱스
+
+      //이벤트 대상 찾기
+      const wrap = document.querySelector(".wrap");
+
+      //슬라이드 인덱스 저장할 변수 선언
+      let index = 0;
+
+      //이전 버튼 클릭 시 슬라이드가 오른쪽으로 이동
+      document.querySelector(".prev").addEventListener("click", (e) => {
+        if (index == 0) return; //이전 페이지가 없으면 멈춤
+        index -= 1;
+        wrap.style.transform = `translate(-${300 * index}px)`;
+      });
+
+      //다음 버튼 클릭 시 슬라이드가 왼쪽으로 이동
+      document.querySelector(".next").addEventListener("click", (e) => {
+        if (index == 4) return; //다음 페이지가 없으면 멈춤
+        index += 1;
+        wrap.style.transform = `translate(-${300 * index}px)`;
+      });
+    </script>
+  </body>
+</html>

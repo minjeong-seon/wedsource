@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>alert-수업종료까지 남은 시간 타이머</title>
+    <style>
+      .alert-box {
+        background: skyblue;
+        padding: 25px;
+        color: white;
+        border-radius: 5px;
+        display: none;
+        position: relative;
+        margin: 0;
+      }
+      button {
+        border: 0;
+        border-radius: 10px;
+        padding: 10px;
+        background: dodgerblue;
+        color: white;
+        cursor: pointer;
+      }
+      .close {
+        cursor: pointer;
+        position: absolute;
+        right: 5px;
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="alert-box">
+      <h3 id="d-time"></h3>
+      <span class="close">ⓧ</span>
+    </div>
+    <button class="show">남은 시간 확인하기</button>
+
+    <script>
+      //알림창 보여주기 버튼 클릭 시 타이머 보기
+      const show = document.querySelector(".show");
+      show.addEventListener("click", () => {
+        document.querySelector(".alert-box").style.display = "block";
+        diffTime();
+        setInterval(diffTime, 1000);
+        show.style.display = "none";
+      });
+
+      const remainHour = document.getElementById("d-time");
+      let date = new Date();
+      function diffTime() {
+        const finishTime = date.setHours(18, 20, 00);
+        const currentTime = new Date();
+        const diff = finishTime - currentTime;
+        const diffDay = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const diffHour = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const diffMin = Math.floor((diff / (1000 * 60)) % 60);
+        const diffSec = Math.floor((diff / 1000) % 60);
+
+        if (diffHour > 0 && diffMin >= 0 && diffSec >= 0) {
+          remainHour.innerHTML = `수업종료까지 남은 시간은 ${diffHour}시간 ${diffMin}분 ${diffSec}초 입니다.`;
+        } else {
+          remainHour.innerHTML = "수업이 종료되었습니다.";
+        }
+      }
+
+      //ⓧ클릭 시 창 닫기
+      document.querySelector(".close").addEventListener("click", () => {
+        document.querySelector(".alert-box").style.display = "none";
+        show.style.display = "block";
+      });
+    </script>
+  </body>
+</html>

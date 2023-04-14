@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dark-mode</title>
+    <style>
+      span {
+        cursor: pointer;
+      }
+      .badge {
+        padding: 10px;
+      }
+      /* .bg-dark {
+        background: dimgray;
+      } */
+    </style>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <span class="navbar-brand">JSShop</span>
+        <span class="badge bg-dark">Dark🔄</span>
+      </div>
+    </nav>
+    <script>
+      //dark🔄를 클릭하면 문서의 배경색은 어둡게, 버튼은 Light🔄로 변경
+      //Light🔄 클릭하면 배경색은 밝게, 버튼은 반대로 되도록
+
+      //class="bg-dark" 클래스명을 부착했다가 탈착하는 방법으로 구현
+
+      //이벤트 대상 찾기
+      const badge = document.querySelector(".badge");
+      //변화를 줄 요소
+      const body = document.querySelector("body");
+      //조건을 부여하기 위한 변수 선언(true/false)
+      let mode = true;
+      //이벤트 발생 시 변화를 함수로 작성
+      function modeChange(e) {
+        if (mode) {
+          //배경색이 밝을 때
+          body.classList.add("bg-dark");
+          badge.innerHTML = "Light🔄";
+          mode = false;
+        } else {
+          //배경색이 어두울 때
+          body.classList.remove("bg-dark");
+          badge.innerHTML = "dark🔄";
+          mode = true;
+        }
+      }
+      badge.addEventListener("click", modeChange);
+    </script>
+  </body>
+</html>

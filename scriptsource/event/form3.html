@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form3</title>
+  </head>
+  <body>
+    <form action="" method="get">
+      <div>
+        <label for="username">이름: </label>
+        <input type="text" name="username" id="username" />
+      </div>
+
+      <div>
+        <label for="password">비밀번호: </label>
+        <input type="text" name="password" id="password" />
+      </div>
+      <div>
+        <label for="id">나이: </label>
+        <input type="text" name="age" id="age" />
+      </div>
+      <div>
+        <button type="submit">전송</button>
+      </div>
+    </form>
+    <script>
+      //폼이 전송되기 전(=전송버튼 클릭되면), 사용자가 값을 제대로 입력했는지(값의 유무) 확인
+      //값이 비어있으면 경고창 띄움(00을 입력하세요.)
+      //   document
+      //     .querySelector("[type='submit']")
+      //     .addEventListener("click", (e) => {
+      //       //폼이 바로 전송되지 않도록 이벤트 막기
+      //         e.preventDefault();
+      //       //요소 점검
+      //     });
+
+      document.querySelector("form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const username = document.getElementById("username");
+        const password = document.getElementById("password");
+        const age = document.getElementById("age");
+
+        //요소 점검
+        if (username.value == "") {
+          alert("이름을 입력하세요.");
+          username.focus();
+          return;
+        } else if (password.value == "") {
+          alert("비밀번호를 입력하세요.");
+          password.focus();
+          return;
+        } else if (age.value == "") {
+          alert("나이를 입력하세요.");
+          age.focus();
+          return;
+        }
+        //모든 값이 입력되었으면 폼 전송
+        document.querySelector("form").submit();
+      });
+    </script>
+  </body>
+</html>

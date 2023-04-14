@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js-create6-태그삽입 변형</title>
+  </head>
+  <body>
+    <header><h1>Simple HTML</h1></header>
+    <div id="content">
+      <p>This is a <i>simple</i> HTML file.</p>
+    </div>
+    <div class="callout">
+      <p>This is as fancy as we'll get!</p>
+    </div>
+    <p>
+      IDs (such as <span class="code">#content</span>)are unique (there can only
+      ne one per page)
+    </p>
+    <p>
+      Classes (such as <span class="code">.callout</span>) can be used on many
+      elements
+    </p>
+    <div id="callout2" class="callout fancy">
+      <p>A single HTML element can have multiple classes</p>
+    </div>
+
+    <script>
+      window.onload = function () {
+        // content 의 현재 자식을 기준으로 p1은 앞 쪽에 p2는 뒤에 삽입
+        //insertAdjacentHTML() 으로 create4 실행하기
+        const content = document.getElementById("content");
+        let p1 = "<p>I was create dynamically</P>";
+        content.insertAdjacentHTML("afterbegin", p1);
+        let p2 = "<p>I was also create dynamically!!</P>";
+        content.insertAdjacentHTML("beforeend", p2);
+      };
+    </script>
+  </body>
+</html>

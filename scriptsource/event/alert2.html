@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>alert-아이디,비번 firstChild</title>
+    <style>
+      .alert-box {
+        background: skyblue;
+        padding: 25px;
+        color: white;
+        border-radius: 5px;
+        display: none;
+        position: relative;
+        margin: 0;
+      }
+      button {
+        border: 0;
+        border-radius: 10px;
+        padding: 10px;
+        background: dodgerblue;
+        color: white;
+        cursor: pointer;
+      }
+      .close {
+        cursor: pointer;
+        position: absolute;
+        right: 5px;
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="alert-box">
+      <span class="close">ⓧ</span>
+    </div>
+    <button class="id">아이디</button>
+    <button class="pwd">비밀번호</button>
+
+    <script>
+      const alertBox = document.querySelector(".alert-box");
+      const notification = function (state, msg) {
+        // msg가 안 들어 오는 경우 ==> undifined
+        // console.log(msg);
+        alertBox.style.display = state;
+        if (msg != undefined) {
+          // console.log(alertBox.firstChild); <--엔터까지 자식으로 읽어옴
+          // console.log(alertBox.firstChild.nodeValue);
+          alertBox.firstChild.nodeValue = msg;
+        } else {
+        }
+      };
+
+      //아이디 버튼 클릭 시 alert창에 '아이디를 입력해 주세요.' 띄우기
+      document.querySelector(".id").addEventListener("click", () => {
+        notification("block", "아이디를 입력해 주세요.");
+      });
+
+      //비밀번호 버튼 클릭 시 alert창에 '비밀번호를 입력해 주세요.' 띄우기
+      document.querySelector(".pwd").addEventListener("click", () => {
+        notification("block", "비밀번호를 입력해 주세요");
+      });
+
+      //ⓧ클릭 시 알림창 닫기
+      document.querySelector(".close").addEventListener("click", () => {
+        notification("none");
+      });
+    </script>
+  </body>
+</html>

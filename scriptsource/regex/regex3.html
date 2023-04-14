@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>regex3-로그인페이지</title>
+    <style>
+      span {
+        color: red;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <label for="name">이름</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="이름"
+          maxlength="4"
+        />
+        <span id="namers"></span>
+      </div>
+      <div>
+        <label for="email">e-mail</label>
+        <input
+          type="text"
+          name="email"
+          id="email"
+          placeholder="abc123@naver.com"
+        />
+        <span id="emailrs"></span>
+      </div>
+      <div>
+        <label for="tel">전화번호</label>
+        <input
+          type="text"
+          name="tel"
+          id="tel"
+          placeholder="'-'를 제외한 숫자만 입력"
+        />
+        <span id="result"></span>
+      </div>
+      <div>
+        <button type="button">확인</button>
+      </div>
+    </form>
+    <script>
+      //abc123@naver.com 이메일이 제대로 입력되었는지 확인
+      //값이 비어 있거나 패턴에 맞는지 확인
+      document.getElementById("email").addEventListener("change", (e) => {
+        const reEmail = /\S+@\S+\.\S+/;
+        if (e.target.value == "" || !reEmail.test(e.target.value)) {
+          document.getElementById("emailrs").innerHTML =
+            "e-mail 형식을 확인해 주세요.";
+          e.target.select();
+        }
+      });
+
+      //이름에 한글이 입력되었는지 확인(포커스를 벗어나면 검증 실행)
+      document.getElementById("name").addEventListener("change", (e) => {
+        const regex = /^[가-힣]{2,4}$/;
+        if (!regex.test(e.target.value)) {
+          document.getElementById("namers").innerHTML = "이름을 확인해 주세요.";
+          e.target.select();
+        } else {
+          document.getElementById("namers").innerHTML = "";
+        }
+      });
+
+      //전화번호가 맞게 입력되었는지 확인(포커스를 벗어나면 검증 실행)
+      document.getElementById("tel").addEventListener("change", (e) => {
+        const re = /^\d{3}\d{4}\d{4}/;
+        const tel = e.target.value;
+        if (!re.test(tel)) {
+          document.querySelector("#result").innerHTML =
+            "전화번호를 확인해 주세요.";
+          e.target.select();
+        } else {
+          document.querySelector("#result").innerHTML = "";
+        }
+      });
+    </script>
+  </body>
+</html>
