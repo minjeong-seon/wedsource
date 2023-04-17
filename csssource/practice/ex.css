@@ -1,0 +1,11 @@
+#top_menu li {
+  list-style: none;
+  font-size: 14px;
+  padding: 30px;
+  display: inline-block;
+}
+
+#main {
+  text-align: left;
+  width: 600px;
+}
